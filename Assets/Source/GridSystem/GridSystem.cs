@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
-    private float screenWidth = 2f;
-    private float screenHeight = 2f;
+    private float screenWidth = 2.7f;
+    private float screenHeight = 2.7f;
 
     private static int rows = 8;
     private static int columns = 14;
