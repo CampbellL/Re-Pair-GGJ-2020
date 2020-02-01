@@ -859,6 +859,7 @@ GameObject:
   - component: {fileID: 551513400}
   - component: {fileID: 551513399}
   - component: {fileID: 551513398}
+  - component: {fileID: 551513401}
   m_Layer: 0
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -928,7 +929,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 551513399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 551513401}
+        m_MethodName: resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &551513399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +977,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551513396}
   m_CullTransparentMesh: 0
+--- !u!114 &551513401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551513396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff08dc03c3f908d4a9c93cc04c323eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainMenu: {fileID: 2038759574}
+  SeasonLevelScreen: {fileID: 1567718711}
 --- !u!1 &672975167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,7 +2701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1567718712
 Transform:
   m_ObjectHideFlags: 0
@@ -3550,7 +3576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2038759575
 Transform:
   m_ObjectHideFlags: 0
