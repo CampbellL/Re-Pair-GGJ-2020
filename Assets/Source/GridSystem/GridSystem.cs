@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
-    private float screenWidth = 1f;
-    private float screenHeight = 1f;
+    private float screenWidth = 2f;
+    private float screenHeight = 2f;
 
     private static int rows = 8;
-    private static int columns = 16;
+    private static int columns = 14;
 
     private float cellSizeW;
     private float cellSizeH;
@@ -36,16 +36,14 @@ public class GridSystem : MonoBehaviour
 
         minCellSize = Mathf.Min(cellSizeW, cellSizeH);
 
-        widthFixing = (screenWidth - minCellSize * 16.0f) / 2.0f;
-        heightFixing = (screenHeight - minCellSize * 8.0f) / 2.0f;
+        widthFixing = (screenWidth - minCellSize * columns) / 2.0f;
+        heightFixing = (screenHeight - minCellSize * rows) / 2.0f;
 
         halfMinCellSize = minCellSize/2.0f;
         
         camera = FindObjectOfType<Camera>();
         
         callEach();
-        
-        Debug.Log(screenWidth+"    "+screenHeight);
     }
     
     // Update is called once per frame
@@ -65,24 +63,24 @@ public class GridSystem : MonoBehaviour
         {
             for (int j = 0; j < columns; j++)
             {
-                /*
-                Instantiate(playerSprite, new Vector3(widthFixing + j * minCellSize, 
-                                                        heightFixing + i * minCellSize, 
-                                                            0), Quaternion.identity);
-                                                            */
-                /*
-                Vector2 viewportPosition = new Vector2((j * minCellSize) / (screenWidth / 2),
-                                                        (i * minCellSize) / (screenHeight / 2));
-                                                        */
                 
-                Vector2 viewportPosition = new Vector2((j * minCellSize) / (screenWidth / 2),
-                    (i * minCellSize) / (screenWidth / 2));
-                
+                Vector2 viewportPosition = new Vector2((widthFixing+halfMinCellSize) + (j * minCellSize) - screenWidth/2,
+                                                        (heightFixing+halfMinCellSize) + (i * minCellSize) - screenHeight/2);
+                                                        
+                /*
                 Vector3 p = camera.ViewportToWorldPoint(new Vector3(viewportPosition.x, viewportPosition.y, camera.nearClipPlane));
                 var gridCell = Instantiate(playerSprite, p, Quaternion.identity);
+                */
+                /*
+                Vector2 viewportPosition = new Vector2((widthFixing+halfMinCellSize) + (j * minCellSize) - screenWidth/2,
+                    (heightFixing+halfMinCellSize) + (i * minCellSize) - screenHeight/2);
                 
+                
+                Vector3 p = camera.ViewportToWorldPoint(new Vector3(viewportPosition.x, viewportPosition.y, camera.nearClipPlane));
+*/
+                var gridCell = Instantiate(playerSprite, viewportPosition, Quaternion.identity);
                 gridCell.transform.parent = gameObject.transform;
             }
         }
     }
-}
+} 
