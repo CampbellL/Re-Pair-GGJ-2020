@@ -10,7 +10,8 @@ public class ButtonSound : MonoBehaviour
     {
        
         Button b = GetComponent<Button>();
-        AudioSource audio = Camera.main.GetComponent<AudioSource>();        b.onClick.AddListener(delegate () {
+        AudioSource audio = Camera.main.GetComponent<AudioSource>();
+        b.onClick.AddListener(delegate () {
             audio.Play();
         });
     }
