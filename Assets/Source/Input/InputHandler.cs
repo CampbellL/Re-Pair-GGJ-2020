@@ -65,7 +65,6 @@ public class InputHandler : MonoBehaviour
                 hitAnimal.connectedObject = _startHit.gameObject;
                 hitAnimal.GetComponent<Animal>().isStatic = true;
                 _startHit.gameObject.GetComponent<Animal>().connectedObject = _endHit.gameObject;
-                GameMode.instance.Play();
             })
             .AddTo(this);
     }

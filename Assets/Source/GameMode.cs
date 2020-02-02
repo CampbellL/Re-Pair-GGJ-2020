@@ -103,7 +103,7 @@ namespace Source
             else
             {
                 //level completed
-                Debug.Log("Level Complete!");
+                SceneManager.LoadScene("MainScene");
             }
         }
 
