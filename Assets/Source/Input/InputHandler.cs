@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Source;
+using Source.Animals;
 using UniRx;
 using UnityEngine;
 
@@ -59,8 +61,9 @@ public class InputHandler : MonoBehaviour
                 this._renderers.Peek().SetPosition(1, new Vector3(hitPosition.x, hitPosition.y, 1));
                 Animal hitAnimal = _endHit.GetComponent<Animal>();
                 hitAnimal.connectedObject = _startHit.gameObject;
-                hitAnimal.GetComponent<Animal>().isStatic = true;
+                hitAnimal.isStatic = true;
                 _startHit.gameObject.GetComponent<Animal>().connectedObject = _endHit.gameObject;
+                GameMode.instance.Play();
             })
             .AddTo(this);
     }
