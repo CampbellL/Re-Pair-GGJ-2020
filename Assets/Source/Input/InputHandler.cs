@@ -19,8 +19,8 @@ public class InputHandler : MonoBehaviour
         _renderers = new Stack<LineRenderer>();
         var mouseUpObservable = Observable.EveryUpdate()
             .Where(_ => Input.touchCount == 1)
-            .Where(_ => Input.GetTouch(0).phase == TouchPhase.Ended)
-            .Where(_ => _startHit.GetComponent<Animal>().connectedObject == null);
+            .Where(_ => Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled)
+            .Where(_ => _startHit != null && _startHit.GetComponent<Animal>().connectedObject == null);
 
         var clickObservable = Observable.EveryUpdate()
             .Where(_ => Input.touchCount == 1)
@@ -57,9 +57,10 @@ public class InputHandler : MonoBehaviour
                 }
                 Vector3 hitPosition = _endHit.gameObject.transform.position;
                 this._renderers.Peek().SetPosition(1, new Vector3(hitPosition.x, hitPosition.y, 1));
-                GameObject hitGameObject;
-                (hitGameObject = _endHit.gameObject).GetComponent<Animal>().connectedObject = _startHit.gameObject;
-                _startHit.gameObject.GetComponent<Animal>().connectedObject = hitGameObject;
+                Animal hitAnimal = _endHit.GetComponent<Animal>();
+                hitAnimal.connectedObject = _startHit.gameObject;
+                hitAnimal.GetComponent<Animal>().isStatic = true;
+                _startHit.gameObject.GetComponent<Animal>().connectedObject = _endHit.gameObject;
             })
             .AddTo(this);
     }
