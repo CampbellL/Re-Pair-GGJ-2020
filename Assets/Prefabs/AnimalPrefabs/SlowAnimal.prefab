@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3918781836422918114}
   - component: {fileID: 4665332760561638835}
+  - component: {fileID: -4678963955810035744}
   m_Layer: 0
-  m_Name: Camelion_Normal
+  m_Name: SlowAnimal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,3 +83,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4678963955810035744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934815050278299695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce5129b222e67445a3f09bc7d44c9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 0
+  isMatched: 0
+  isImmovable: 0
+  connectedObject: {fileID: 0}
+  animalType: 
+  season: 0
+  normalSprites: []
+  happySprites: []
+  sadSprites: []

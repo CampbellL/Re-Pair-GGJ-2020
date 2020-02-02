@@ -26,6 +26,7 @@ namespace Source
     public class GameMode : MonoBehaviour
     {
         public static GameMode instance;
+        public int season;
         public Rule[] rules;
         public FailCombinations[] failCombinations;
         public int Tries { get; private set; }
