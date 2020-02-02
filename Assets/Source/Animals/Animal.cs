@@ -10,6 +10,7 @@ namespace Source.Animals
         [HideInInspector] public bool isStatic;
         [HideInInspector] public bool isMatched;
         [HideInInspector] public bool isImmovable;
+        [HideInInspector] public bool playFinished;
         [HideInInspector] public GameObject connectedObject;
         public string animalType;
 
@@ -87,6 +88,7 @@ namespace Source.Animals
             _move = false;
             isMatched = false;
             isStatic = false;
+            playFinished = false;
             connectedObject = null;
             transform.position = _initialPosition;
             sprRndr.enabled = true;
@@ -117,6 +119,8 @@ namespace Source.Animals
                     sprRndr.enabled = false;
                     colliderRef.enabled = false;
                     otherScript.colliderRef.enabled = false;
+                    playFinished = true;
+                    otherScript.playFinished = true;
 
                     if (matchSuccess)
                     {
@@ -128,7 +132,6 @@ namespace Source.Animals
                     }
                     else
                     {
-                        Debug.Log("fail!");
                         foreach (var combination in _failCombinations)
                         {
                             if ((combination.type1 == otherScript.animalType || combination.type2 == otherScript.animalType)
@@ -149,6 +152,7 @@ namespace Source.Animals
             else if (other.CompareTag("Block"))
             {
                 _move = false;
+                playFinished = true;
                 
                 //fail state
                 Animal otherScript = other.gameObject.GetComponent<Animal>();
