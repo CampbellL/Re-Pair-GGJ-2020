@@ -22,12 +22,20 @@ namespace Source
         public string type2;
         public Sprite combinationSprite;
     }
+    
+    [System.Serializable]
+    public struct FailCombinationsSeason
+    {
+        public int season;
+        public FailCombinations[] failCombinations;
+    }
 
     public class GameMode : MonoBehaviour
     {
         public static GameMode instance;
+        public int season;
         public Rule[] rules;
-        public FailCombinations[] failCombinations;
+        public FailCombinationsSeason[] failCombinationsSeason;
         public int Tries { get; private set; }
 
         private List<Animal> _animals = new List<Animal>();

@@ -268,7 +268,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
+  m_RootOrder: 2
+=======
   m_RootOrder: 5
+>>>>>>> dad066880c06379bb38c92955a812c0036670cf6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503092309
 GameObject:
@@ -299,7 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f1660677577c745a484bcf0d93a3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefabs: []
+  levelName: level1
+  objectPrefabs:
+  - {fileID: 0}
+  - {fileID: 2728828823412595086, guid: 39c711102cafcf041a04d7cc1005984a, type: 3}
   spritePrefab: {fileID: 3727677014142962104, guid: c1b2630166c132542920d5f06400a3ab,
     type: 3}
 --- !u!4 &1503092311
@@ -314,6 +321,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &670144164652430363
@@ -523,3 +534,4 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df6cc3d10c059b40829d18b6e09c5a4, type: 3}
+>>>>>>> dad066880c06379bb38c92955a812c0036670cf6

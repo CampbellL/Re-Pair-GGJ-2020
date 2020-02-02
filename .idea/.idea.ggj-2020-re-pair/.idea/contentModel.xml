@@ -273,8 +273,15 @@
         <e p="Source" t="Include">
           <e p="Animals" t="Include">
             <e p="Animal.cs" t="Include" />
+            <e p="FastAnimal.cs" t="Include" />
+            <e p="NormalAnimal.cs" t="Include" />
+            <e p="SlowAnimal.cs" t="Include" />
+            <e p="SpecialAnimal.cs" t="Include" />
           </e>
           <e p="GameMode.cs" t="Include" />
+          <e p="GridSystem" t="Include">
+            <e p="GridSystem.cs" t="Include" />
+          </e>
           <e p="Input" t="Include">
             <e p="InputHandler.cs" t="Include" />
           </e>
@@ -287,6 +294,10 @@
             <e p="ButtonInteractionQuit.cs" t="Include" />
             <e p="ButtonInteractionResume.cs" t="Include" />
             <e p="ButtonInteractionSeaons.cs" t="Include" />
+            <e p="ButtonSound.cs" t="Include" />
+            <e p="ClickHome.cs" t="Include" />
+            <e p="MenuSwitch.cs" t="Include" />
+            <e p="MuteDemute.cs" t="Include" />
           </e>
         </e>
       </e>

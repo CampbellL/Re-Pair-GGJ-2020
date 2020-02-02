@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1880601900236830977}
   - component: {fileID: 5203128889903254994}
-  m_Layer: 0
-  m_Name: Flamingo_Normal
-  m_TagString: Untagged
+  - component: {fileID: -4842005103668128159}
+  - component: {fileID: -2409518125759764629}
+  - component: {fileID: -2825978867988054796}
+  m_Layer: 8
+  m_Name: FastAnimal
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,3 +85,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4842005103668128159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728828823412595086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0adb3f595e0d046bbc69965e1dd0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 0
+  isMatched: 0
+  isImmovable: 0
+  connectedObject: {fileID: 0}
+  animalType: FastAnimal
+  normalSprites:
+  - {fileID: 3286163911610860551, guid: 2ad4c1c035ed52b43842ee7200b82f9e, type: 3}
+  - {fileID: 3286163911610860551, guid: 6f90eb45902915e41be7e2501d5c026c, type: 3}
+  - {fileID: 3286163911610860551, guid: 07c05c50587cac44caee1bcd264509ed, type: 3}
+  - {fileID: 3286163911610860551, guid: 387cb996d3c24a14e8a6cf43c679c8d0, type: 3}
+  - {fileID: 3286163911610860551, guid: 30cda0f6ff65cd148919ee0a749ded22, type: 3}
+  happySprites:
+  - {fileID: 3286163911610860551, guid: 54005cf98940a55408c7e14c172fd0ba, type: 3}
+  - {fileID: 3286163911610860551, guid: b5e16664d62fff54bb28d6e4394a80f4, type: 3}
+  - {fileID: 3286163911610860551, guid: 2bd0d080ef5eaf940b944d4d0b0137ee, type: 3}
+  - {fileID: 3286163911610860551, guid: c70a907618218c449b5d9b04b59e2c78, type: 3}
+  - {fileID: 3286163911610860551, guid: a3acc200dbf9ffe4293252ceebffc9f8, type: 3}
+  sadSprites:
+  - {fileID: 3286163911610860551, guid: 95e5f5c65ec5e334a84a8314fef82b13, type: 3}
+  - {fileID: 3286163911610860551, guid: 693aea6a13d264642a33e44748a60701, type: 3}
+  - {fileID: 3286163911610860551, guid: 64fbb00c68c799741bd3184065c8bdb1, type: 3}
+  - {fileID: 3286163911610860551, guid: 1a21dd1e655ac994b81827f7f872572b, type: 3}
+  - {fileID: 3286163911610860551, guid: 742c098a4b69d5b47b414cc3379a0be7, type: 3}
+--- !u!61 &-2409518125759764629
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728828823412595086}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.3582, y: 4.597493}
+    newSize: {x: 3.3582, y: 4.597493}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 2.17}
+  m_EdgeRadius: 0
+--- !u!50 &-2825978867988054796
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728828823412595086}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
