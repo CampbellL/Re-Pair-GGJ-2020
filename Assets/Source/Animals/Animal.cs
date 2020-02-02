@@ -14,7 +14,7 @@ namespace Source.Animals
         [HideInInspector] public GameObject connectedObject;
         public string animalType;
 
-        public Sprite[] normalSprites;
+        public Sprite[] normalSprites;  
         public Sprite[] happySprites;
         public Sprite[] sadSprites;
 
