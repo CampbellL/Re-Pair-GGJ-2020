@@ -100,6 +100,7 @@ MonoBehaviour:
   isStatic: 0
   isMatched: 0
   isImmovable: 0
+  playFinished: 0
   connectedObject: {fileID: 0}
   animalType: SpecialAnimal
   normalSprites:
@@ -120,6 +121,7 @@ MonoBehaviour:
   - {fileID: 3286163911610860551, guid: 1b14df4e232b200449ad2599f58adb17, type: 3}
   - {fileID: 3286163911610860551, guid: 1b14df4e232b200449ad2599f58adb17, type: 3}
   - {fileID: 3286163911610860551, guid: 1b14df4e232b200449ad2599f58adb17, type: 3}
+  moveSpeed: 1
 --- !u!61 &-5490450741528271625
 BoxCollider2D:
   m_ObjectHideFlags: 0

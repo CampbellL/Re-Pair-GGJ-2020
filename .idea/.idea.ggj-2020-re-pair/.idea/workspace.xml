@@ -4,8 +4,25 @@
     <list default="true" id="7f5cf753-787f-4fcc-b500-6a5156b46215" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Tutorial4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Tutorial4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MenuAssets/WinterButtons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/FastAnimal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/FastAnimal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/NormalAnimal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/NormalAnimal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/SlowAnimal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/SlowAnimal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/SpecialAnimal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/SpecialAnimal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Line.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/arrow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/slash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/slash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springBlock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springBlock.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UISprites/LegendSeasons/Spring Season/springLegendBG7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapGridSceneSP1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapGridSceneSP1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapGridSceneT1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapGridSceneT1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Animals/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Animals/Animal.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +56,8 @@
         <option value="$PROJECT_DIR$/Assets/Source/Animals/SpecialAnimal.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/GameMode.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/Input/InputHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Source/Animals/Animal.cs" />
         <option value="$PROJECT_DIR$/Assets/Source/GridSystem/GridSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Source/Animals/Animal.cs" />
       </list>
     </option>
   </component>
@@ -100,6 +117,8 @@
       <workItem from="1580654312233" duration="15000" />
       <workItem from="1580654741632" duration="651000" />
       <workItem from="1580657500027" duration="354000" />
+      <workItem from="1580658363294" duration="13000" />
+      <workItem from="1580658524810" duration="21000" />
     </task>
     <servers />
   </component>
