@@ -100,8 +100,26 @@ public class InputHandler : MonoBehaviour
 
             var xLength = GetXLength(position.x,pos.x);
             var yLength = GetYLength(position.y,pos.y);
+
+            Vector2 finalMidPos;
             
-            Vector2 finalMidPos = new Vector2(middlePos.x - yLength/2,middlePos.y + xLength/2);
+            if (position.x <= pos.x && position.y <= pos.y)        //ok
+            {
+                finalMidPos = new Vector2(middlePos.x - yLength/2,middlePos.y + xLength/2);
+            }
+            else if (position.x <= pos.x && position.y > pos.y)
+            {
+                finalMidPos = new Vector2(middlePos.x + yLength/2,middlePos.y + xLength/2);
+            }
+            else if (position.x > pos.x && position.y <= pos.y)        //ok
+            {
+                finalMidPos = new Vector2(middlePos.x - yLength/2,middlePos.y - xLength/2);
+            }
+            else
+            {
+                finalMidPos = new Vector2(middlePos.x + yLength/2,middlePos.y - xLength/2);
+            }
+            
 
             this._renderers.Peek().SetPosition(1, new Vector3(finalMidPos.x,finalMidPos.y,1));
             this._renderers.Peek().SetPosition(2, new Vector3(pos.x, pos.y, 1));
