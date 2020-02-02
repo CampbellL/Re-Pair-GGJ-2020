@@ -32,11 +32,14 @@ namespace Source
 
         private List<Animal> _animals = new List<Animal>();
 
+        private void Awake()
+        {
+            instance = this;
+        }
+
         // Start is called before the first frame update
         void Start()
         {
-            instance = this;
-
             Tries = 0;
             StartCoroutine(Test());
         }

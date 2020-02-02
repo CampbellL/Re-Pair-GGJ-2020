@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 234838566}
   m_Layer: 8
   m_Name: Triangle (1)
-  m_TagString: Finish
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 761461430}
   m_Layer: 8
   m_Name: redsquare
-  m_TagString: Respawn
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 1514893739}
   m_Layer: 8
   m_Name: redsquare (1)
-  m_TagString: Respawn
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 1623643823}
   m_Layer: 8
   m_Name: Triangle
-  m_TagString: Finish
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
