@@ -18,7 +18,7 @@ namespace Source.Animals
         public Sprite[] happySprites;
         public Sprite[] sadSprites;
 
-        protected float moveSpeed = 10f;
+        public float moveSpeed = 10f;
         protected SpriteRenderer sprRndr;
         protected Collider2D colliderRef;
 
@@ -68,7 +68,7 @@ namespace Source.Animals
                 transform1.position = position;
 
                 //orient towards target
-                transform1.up = tarPos - transform1.position;
+               // transform1.up = tarPos - transform1.position;
             }
         }
 
