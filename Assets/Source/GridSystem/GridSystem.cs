@@ -23,10 +23,14 @@ public class GridSystem : MonoBehaviour
 
     private Camera camera;
 
-    public int[][] playerArray;            //int array
+    public int[,] playerArray; //int array
 
-    public GameObject playerSprite;
-    
+    public Dictionary<Vector2, int> openWith = //not string but BasicObject
+        new Dictionary<Vector2, int>();
+
+    public GameObject[] objectPrefabs;
+
+    public GameObject spritePrefab;
     
     // Start is called before the first frame update
     void Start()
@@ -39,48 +43,72 @@ public class GridSystem : MonoBehaviour
         widthFixing = (screenWidth - minCellSize * columns) / 2.0f;
         heightFixing = (screenHeight - minCellSize * rows) / 2.0f;
 
-        halfMinCellSize = minCellSize/2.0f;
-        
+        halfMinCellSize = minCellSize / 2.0f;
+
         camera = FindObjectOfType<Camera>();
-        
+
+        playerArray = new int[rows, columns];
+
         callEach();
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    
-    public void addPlayer(int player, int row, int column)        //currently represented as int
+
+    public void addPlayer(int player, int row, int column) //currently represented as int
     {
-        playerArray[row][column] = player;
+        playerArray[row, column] = player;
     }
 
     public void callEach()
     {
-        for(int i = 0; i<rows; i++)
+        for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < columns; j++)
             {
-                
-                Vector2 viewportPosition = new Vector2((widthFixing+halfMinCellSize) + (j * minCellSize) - screenWidth/2,
-                                                        (heightFixing+halfMinCellSize) + (i * minCellSize) - screenHeight/2);
-                                                        
-                /*
-                Vector3 p = camera.ViewportToWorldPoint(new Vector3(viewportPosition.x, viewportPosition.y, camera.nearClipPlane));
-                var gridCell = Instantiate(playerSprite, p, Quaternion.identity);
-                */
-                /*
-                Vector2 viewportPosition = new Vector2((widthFixing+halfMinCellSize) + (j * minCellSize) - screenWidth/2,
-                    (heightFixing+halfMinCellSize) + (i * minCellSize) - screenHeight/2);
-                
-                
-                Vector3 p = camera.ViewportToWorldPoint(new Vector3(viewportPosition.x, viewportPosition.y, camera.nearClipPlane));
-*/
-                var gridCell = Instantiate(playerSprite, viewportPosition, Quaternion.identity);
-                gridCell.transform.parent = gameObject.transform;
+                if (playerArray[i, j] != null)
+                {
+                    Vector2 viewportPosition = new Vector2(
+                        (widthFixing + halfMinCellSize) + (j * minCellSize) - screenWidth / 2,
+                        (heightFixing + halfMinCellSize) + (i * minCellSize) - screenHeight / 2);
+
+
+                    openWith.Add(viewportPosition, 1);
+                    /*
+                    Vector3 p = camera.ViewportToWorldPoint(new Vector3(viewportPosition.x, viewportPosition.y, camera.nearClipPlane));
+                    var gridCell = Instantiate(playerSprite, p, Quaternion.identity);
+                    */
+                    /*
+                    Vector2 viewportPosition = new Vector2((widthFixing+halfMinCellSize) + (j * minCellSize) - screenWidth/2,
+                        (heightFixing+halfMinCellSize) + (i * minCellSize) - screenHeight/2);
+                    
+                    
+                    Vector3 p = camera.ViewportToWorldPoint(new Vector3(viewportPosition.x, viewportPosition.y, camera.nearClipPlane));
+    */
+                    
+                    
+                    var gridCell = Instantiate(spritePrefab, viewportPosition, Quaternion.identity);
+                    gridCell.transform.parent = gameObject.transform;
+                    
+                }
             }
         }
     }
-} 
+/*
+    public void InitializeObject(Dictionary<Vector2, int> helpWith){}
+    {
+        
+    }
+    */
+
+    public void InitializeObject(Vector2 position, int type) //0 = horizontal, 1 = slopeDown, 2 = vertical, 3 = slopeUp, 4 = slowAnimal, 5 = normalAnimal, 6 = fastAnimal
+    {
+        var gridCellSprite = Instantiate(objectPrefabs[type], position, Quaternion.identity); //THIS IS OF TYPE VAAAARRRRRR
+        gridCellSprite.transform.parent = gameObject.transform;
+    }
+
+
+}
