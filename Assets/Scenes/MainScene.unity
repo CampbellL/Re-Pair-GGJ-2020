@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 93648396}
   - component: {fileID: 93648395}
   - component: {fileID: 93648398}
+  - component: {fileID: 93648399}
   m_Layer: 0
   m_Name: Lv4Button
   m_TagString: Untagged
@@ -949,7 +950,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93648396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 93648399}
+        m_MethodName: changeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93648396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1008,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c8137add4898564894a9c37638671ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &93648399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93648393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59e0cfcc6274fd4385edc3cb25ee3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &122106746
@@ -14767,6 +14791,7 @@ GameObject:
   - component: {fileID: 1333274490}
   - component: {fileID: 1333274489}
   - component: {fileID: 1333274492}
+  - component: {fileID: 1333274493}
   m_Layer: 0
   m_Name: Lv2Button
   m_TagString: Untagged
@@ -14835,7 +14860,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1333274490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1333274493}
+        m_MethodName: changeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1333274490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14882,6 +14918,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c8137add4898564894a9c37638671ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1333274493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333274487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafca13c5b2cf074c932dc60157ed31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1336293668
@@ -21537,6 +21585,7 @@ GameObject:
   - component: {fileID: 2002281991}
   - component: {fileID: 2002281990}
   - component: {fileID: 2002281993}
+  - component: {fileID: 2002281994}
   m_Layer: 0
   m_Name: Lv3Button
   m_TagString: Untagged
@@ -21605,7 +21654,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2002281991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2002281994}
+        m_MethodName: changeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2002281991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21652,6 +21712,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c8137add4898564894a9c37638671ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002281994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002281988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f813788bc59888345ab8a7b4a476d1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2003567122
