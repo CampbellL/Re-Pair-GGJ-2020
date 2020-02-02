@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Source;
 using Source.Animals;
 using UniRx;
-using UnityEditor;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
