@@ -22,6 +22,7 @@ namespace Source.Animals
         protected Collider2D colliderRef;
 
         private List<string> _matchableAnimalTypes = new List<string>();
+        private FailCombinations[] _failCombinations;
         private Vector2 _initialPosition;
         private bool _move = false;
 
@@ -46,6 +47,7 @@ namespace Source.Animals
                 }
             }
 
+            _failCombinations = GameMode.instance.failCombinationsSeason[GameMode.instance.season].failCombinations;
             _initialPosition = transform.position;
 
             sprRndr = GetComponent<SpriteRenderer>();
@@ -119,20 +121,21 @@ namespace Source.Animals
                     if (matchSuccess)
                     {
                         otherScript.sprRndr.sprite = happySprites[GameMode.instance.season];
-                        otherScript.sprRndr.color = new Color(0, 0, 0, 200f);
-                        transform.localScale *= 0.8f;
+                        otherScript.sprRndr.color = new Color(0, 0, 0, 0.3f);
+                        other.transform.localScale *= 0.8f;
                         isMatched = true;
                         otherScript.isMatched = true;
                     }
                     else
                     {
                         Debug.Log("fail!");
-                        foreach (var combination in GameMode.instance.failCombinations)
+                        foreach (var combination in _failCombinations)
                         {
                             if ((combination.type1 == otherScript.animalType || combination.type2 == otherScript.animalType)
                                 && (combination.type1 == animalType || combination.type2 == animalType))
                             {
                                 otherScript.sprRndr.sprite = combination.combinationSprite;
+                                other.transform.localScale = new Vector3(2.1f, 2.1f, 2.1f);
                             }
                             else
                             {

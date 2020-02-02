@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6692976960035099555}
   - component: {fileID: 3968093926236938610}
   - component: {fileID: 9180873185768203140}
-  m_Layer: 0
+  - component: {fileID: 2522869232256293907}
+  - component: {fileID: -1550685759209841896}
+  m_Layer: 8
   m_Name: NormalAnimal
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,21 +103,67 @@ MonoBehaviour:
   connectedObject: {fileID: 0}
   animalType: NormalAnimal
   normalSprites:
-  - {fileID: 3286163911610860551, guid: cb26c32168a52694db6ce11767d4f777, type: 3}
-  - {fileID: 3286163911610860551, guid: 8d4312f0101006043a2620dae3645afa, type: 3}
-  - {fileID: 3286163911610860551, guid: 252b5613f15d4cb42853d6e9f6c07790, type: 3}
-  - {fileID: 3286163911610860551, guid: 09e4132babcf1824c86d61c39e63f00e, type: 3}
-  - {fileID: 3286163911610860551, guid: b3fea5f22605abd48babf69d19a161d4, type: 3}
+  - {fileID: 3286163911610860551, guid: acef76c04a3df81459e0c555f1d0f76b, type: 3}
+  - {fileID: 3286163911610860551, guid: 2e0819bbc5e1c2a4086ee912ea74f271, type: 3}
+  - {fileID: 3286163911610860551, guid: 87bd0f373987e2a42b9803d6953e9676, type: 3}
+  - {fileID: 3286163911610860551, guid: fce606f62bff948458f0a9138a924136, type: 3}
+  - {fileID: 3286163911610860551, guid: e5caffaa044bcfa488cf40776d4c1f3a, type: 3}
   happySprites:
-  - {fileID: 3286163911610860551, guid: ff22b72bc64002d419fc0d232e10a335, type: 3}
-  - {fileID: 3286163911610860551, guid: 79957f2ef8d84574b8de748bdda20c4d, type: 3}
-  - {fileID: 3286163911610860551, guid: f5b62260ae581f34a8c85d1747f0829e, type: 3}
-  - {fileID: 3286163911610860551, guid: 09e4132babcf1824c86d61c39e63f00e, type: 3}
-  - {fileID: 3286163911610860551, guid: b3fea5f22605abd48babf69d19a161d4, type: 3}
+  - {fileID: 3286163911610860551, guid: 5bfe99880e7305442a0a38d27aefa002, type: 3}
+  - {fileID: 3286163911610860551, guid: aa0960e4b6596044b8bf8def74c6a190, type: 3}
+  - {fileID: 3286163911610860551, guid: 826ac924f491bae4bad184f7cfd10afc, type: 3}
+  - {fileID: 3286163911610860551, guid: 73ba5e7c3aea36f4b8699c088b970efd, type: 3}
+  - {fileID: 3286163911610860551, guid: f3c03d316ab0e4a4ba6818c4a1e4d7c8, type: 3}
   sadSprites:
-  - {fileID: 3286163911610860551, guid: df56121c58d397a4db863be64edaed25, type: 3}
-  - {fileID: 3286163911610860551, guid: 8aad325c6e37b1240a5df885887ec6fc, type: 3}
-  - {fileID: 3286163911610860551, guid: dc1282fa37f3d0a45a83495021e51923, type: 3}
-  - {fileID: 3286163911610860551, guid: c46b1fd0d3245214a9ecd7f2cd33cfee, type: 3}
-  - {fileID: 3286163911610860551, guid: 41cd3921c6ac811439c021fedfa6d7d4, type: 3}
-  season: 4
+  - {fileID: 3286163911610860551, guid: 872a356e56abfad468ed3e080978e5d3, type: 3}
+  - {fileID: 3286163911610860551, guid: 8c61e6182a24c0641be12bed72ae11ac, type: 3}
+  - {fileID: 3286163911610860551, guid: 6b90d640352bd7f4aa929e14d7da410f, type: 3}
+  - {fileID: 3286163911610860551, guid: b8d766053fe081342a1c11ad5df16b12, type: 3}
+  - {fileID: 3286163911610860551, guid: 6f3857275b5d05e4c8e4206c6968792f, type: 3}
+--- !u!61 &2522869232256293907
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3727677014142962104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.1343718, y: 4.2928963}
+    newSize: {x: 4.1343718, y: 4.2928963}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 2.17}
+  m_EdgeRadius: 0
+--- !u!50 &-1550685759209841896
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3727677014142962104}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

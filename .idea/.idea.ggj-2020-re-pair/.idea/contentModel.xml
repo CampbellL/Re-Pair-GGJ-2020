@@ -294,6 +294,10 @@
             <e p="ButtonInteractionQuit.cs" t="Include" />
             <e p="ButtonInteractionResume.cs" t="Include" />
             <e p="ButtonInteractionSeaons.cs" t="Include" />
+            <e p="ButtonSound.cs" t="Include" />
+            <e p="ClickHome.cs" t="Include" />
+            <e p="MenuSwitch.cs" t="Include" />
+            <e p="MuteDemute.cs" t="Include" />
           </e>
         </e>
       </e>

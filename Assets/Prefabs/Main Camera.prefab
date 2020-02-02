@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8312838620220867077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8312838620220867321}
+  - component: {fileID: 8312838620220867078}
+  - component: {fileID: 8312838620220867076}
+  - component: {fileID: 8312838620220867079}
+  - component: {fileID: 8312838620220867320}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8312838620220867321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312838620220867077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &8312838620220867078
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312838620220867077}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &8312838620220867076
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312838620220867077}
+  m_Enabled: 1
+--- !u!114 &8312838620220867079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312838620220867077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a984e7f03fb641109716e9deeee9208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8312838620220867320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312838620220867077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804d1d04fe11f4cb29eb0d39d5a931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  season: 0
+  rules:
+  - origin: SlowAnimal
+    targets:
+    - NormalAnimal
+  - origin: NormalAnimal
+    targets:
+    - FastAnimal
+  - origin: FastAnimal
+    targets: []
+  failCombinationsSeason:
+  - season: 0
+    failCombinations:
+    - type1: NormalAnimal
+      type2: FastAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 94e5eb353a96119409cce027b0e09ad0,
+        type: 3}
+    - type1: FastAnimal
+      type2: SlowAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: e71a2c581b58d644093ceb759554db43,
+        type: 3}
+    - type1: SlowAnimal
+      type2: NormalAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 222ee8c285e5585489fbe89c0d2d35a6,
+        type: 3}
+  - season: 1
+    failCombinations:
+    - type1: NormalAnimal
+      type2: FastAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 74605bd3b87f5714298de1510dbc52d4,
+        type: 3}
+    - type1: FastAnimal
+      type2: SlowAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 8bff7bddf6246814daebb136265e3e31,
+        type: 3}
+    - type1: SlowAnimal
+      type2: NormalAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 0b457930d3b418a4e8b2eb686187c849,
+        type: 3}
+  - season: 2
+    failCombinations:
+    - type1: NormalAnimal
+      type2: FastAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 1f5781f02c52df146b8fad09071fb11c,
+        type: 3}
+    - type1: FastAnimal
+      type2: SlowAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 080add79a3bb3e644aa456c8439073e4,
+        type: 3}
+    - type1: SlowAnimal
+      type2: NormalAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 7679e4100d34c724fb2241a15b8328d9,
+        type: 3}
+  - season: 3
+    failCombinations:
+    - type1: NormalAnimal
+      type2: FastAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 44e21b7b40218a047b4f368ab2e9c74e,
+        type: 3}
+    - type1: FastAnimal
+      type2: SlowAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: b7c2ef446fdf23d4a9398d44ff33dd88,
+        type: 3}
+    - type1: SlowAnimal
+      type2: NormalAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: fc946788fb1a41f4791f255734da53de,
+        type: 3}
+  - season: 3
+    failCombinations:
+    - type1: NormalAnimal
+      type2: FastAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 5d927d646c167124b9ea639f6bd25e06,
+        type: 3}
+    - type1: FastAnimal
+      type2: SlowAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: b2f9cc6ef6ff22e40b8be9ce02d04925,
+        type: 3}
+    - type1: SlowAnimal
+      type2: NormalAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: a5b57a666554eeb43b558a19b7849289,
+        type: 3}
+    - type1: NormalAnimal
+      type2: SpecialAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 2a8627c98dcad5d4a994f11fd6d6f82a,
+        type: 3}
+    - type1: SpecialAnimal
+      type2: FastAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: fd0a89943553eb44eb356088347c4354,
+        type: 3}
+    - type1: SpecialAnimal
+      type2: SlowAnimal
+      combinationSprite: {fileID: 3286163911610860551, guid: 81690af9d1dff4e4a994420a10569c56,
+        type: 3}
