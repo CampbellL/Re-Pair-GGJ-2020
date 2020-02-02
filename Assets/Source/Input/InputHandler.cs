@@ -10,7 +10,7 @@ public class InputHandler : MonoBehaviour
     private bool _dragging;
     private Stack<LineRenderer> _renderers;
     private Collider2D _startHit;
-    private GameObject _objectToClone;
+    public GameObject objectToClone;
     private Camera _mainCamera;
     private Collider2D _endHit;
 
@@ -18,7 +18,6 @@ public class InputHandler : MonoBehaviour
     void Start()
     {
         _mainCamera = Camera.main;
-        _objectToClone = new GameObject("Line");
         _renderers = new Stack<LineRenderer>();
         var mouseUpObservable = Observable.EveryUpdate()
             .Where(_ => Input.touchCount == 1)
@@ -40,8 +39,8 @@ public class InputHandler : MonoBehaviour
         clickObservable.Subscribe(element =>
         {
             _dragging = true;
-            GameObject tempObject = Instantiate(_objectToClone, this.transform);
-            _renderers.Push(tempObject.AddComponent<LineRenderer>());
+            GameObject tempObject = Instantiate(objectToClone, this.transform);
+            _renderers.Push(tempObject.GetComponent<LineRenderer>());
             _renderers.Peek().enabled = false;
             Vector3 hitPosition = _startHit.transform.position;
             _renderers.Peek().SetPosition(0, new Vector3(hitPosition.x, hitPosition.y, 0));
