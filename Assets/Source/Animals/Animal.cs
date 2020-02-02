@@ -13,6 +13,10 @@ namespace Source.Animals
         [HideInInspector] public GameObject connectedObject;
         public string animalType;
 
+        public Sprite[] normalSprites;
+        public Sprite[] happySprites;
+        public Sprite[] sadSprites;
+
         protected float moveSpeed = 10f;
         protected SpriteRenderer sprRndr;
         protected Collider2D colliderRef;
@@ -21,7 +25,7 @@ namespace Source.Animals
         private Vector2 _initialPosition;
         private bool _move = false;
 
-        private void Start()
+        protected virtual void Start()
         {
             foreach (var rule in GameMode.instance.rules)
             {
@@ -114,7 +118,9 @@ namespace Source.Animals
 
                     if (matchSuccess)
                     {
-                        otherScript.sprRndr.enabled = false;
+                        otherScript.sprRndr.sprite = happySprites[GameMode.instance.season];
+                        otherScript.sprRndr.color = new Color(0, 0, 0, 200f);
+                        transform.localScale *= 0.8f;
                         isMatched = true;
                         otherScript.isMatched = true;
                     }
@@ -123,8 +129,7 @@ namespace Source.Animals
                         Debug.Log("fail!");
                         foreach (var combination in GameMode.instance.failCombinations)
                         {
-                            if ((combination.type1 == otherScript.animalType ||
-                                 combination.type2 == otherScript.animalType)
+                            if ((combination.type1 == otherScript.animalType || combination.type2 == otherScript.animalType)
                                 && (combination.type1 == animalType || combination.type2 == animalType))
                             {
                                 otherScript.sprRndr.sprite = combination.combinationSprite;
@@ -132,6 +137,7 @@ namespace Source.Animals
                             else
                             {
                                 //fail state
+                                otherScript.sprRndr.sprite = sadSprites[GameMode.instance.season];
                             }
                         }
                     }
@@ -140,7 +146,14 @@ namespace Source.Animals
             else if (other.CompareTag("Block"))
             {
                 _move = false;
-                //fail sprite
+                
+                //fail state
+                Animal otherScript = other.gameObject.GetComponent<Animal>();
+                sprRndr.enabled = false;
+                colliderRef.enabled = false;
+                otherScript.colliderRef.enabled = false;
+                
+                otherScript.sprRndr.sprite = sadSprites[GameMode.instance.season];
             }
         }
     }

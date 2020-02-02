@@ -95,6 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d4ce849d6831840a716a17fcf1a916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
+  isMatched: 0
+  isImmovable: 0
+  connectedObject: {fileID: 0}
+  animalType: NormalAnimal
   normalSprites:
   - {fileID: 3286163911610860551, guid: cb26c32168a52694db6ce11767d4f777, type: 3}
   - {fileID: 3286163911610860551, guid: 8d4312f0101006043a2620dae3645afa, type: 3}
