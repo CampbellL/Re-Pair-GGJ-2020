@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MapGridSceneT1.unity
+    guid: cffcc9aa6918c854a8fe1ed0e2454e83
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 63afebde4e29f43458fc9cf24d0f1760
+  - enabled: 1
+    path: Assets/Scenes/MapGridSceneT2.unity
+    guid: 318662468ce25c048bf48095669232d4
+  - enabled: 1
+    path: Assets/Scenes/MapGridSceneT3.unity
+    guid: 59494c27020ebd04fbab8049568e5aeb
+  - enabled: 1
+    path: Assets/Scenes/MapGridSceneT4.unity
+    guid: b4c26d2963d8146468602708ab94f3aa
   m_configObjects: {}
