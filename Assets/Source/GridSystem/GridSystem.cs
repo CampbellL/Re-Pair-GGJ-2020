@@ -28,14 +28,12 @@ public class GridSystem : MonoBehaviour
 
     public GameObject[] objectPrefabs;
 
-    public GameObject spritePrefab;
-
     // Start is called before the first frame update
     private void Start()
     {
         playerArray = new int[Rows,Columns];
         var i = 0;
-        using(StreamReader reader = new StreamReader(GenerateStreamFromString(Resources.Load<TextAsset>("level1").text)))
+        using(StreamReader reader = new StreamReader(GenerateStreamFromString(Resources.Load<TextAsset>(levelName).text)))
         {
             while (!reader.EndOfStream)
             {
