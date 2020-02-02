@@ -14,7 +14,7 @@ namespace Source
         public string origin;
         public string[] targets;
     }
-    
+
     [System.Serializable]
     public struct FailCombinations
     {
@@ -22,7 +22,7 @@ namespace Source
         public string type2;
         public Sprite combinationSprite;
     }
-    
+
     [System.Serializable]
     public struct FailCombinationsSeason
     {
@@ -39,6 +39,7 @@ namespace Source
         public int Tries { get; private set; }
 
         private List<Animal> _animals = new List<Animal>();
+        private bool _playStarted;
 
         private void Awake()
         {
@@ -49,7 +50,32 @@ namespace Source
         void Start()
         {
             Tries = 0;
-            StartCoroutine(Test());
+        }
+
+        private void Update()
+        {
+            if (_playStarted)
+            {
+                _animals.Clear();
+                _animals = FindObjectsOfType<Animal>().ToList();
+
+                bool playFinished = true;
+
+                foreach (var animal in _animals)
+                {
+                    if (!animal.playFinished)
+                    {
+                        playFinished = false;
+                        break;
+                    }
+                }
+
+                if (playFinished)
+                {
+                    _playStarted = false;
+                    Evaluate();
+                }
+            }
         }
 
         public void Play()
@@ -59,10 +85,13 @@ namespace Source
 
             foreach (var animal in _animals)
                 animal.StartMoving();
+
+            _playStarted = true;
         }
 
         public void Evaluate()
         {
+            _animals.Clear();
             _animals = FindObjectsOfType<Animal>().ToList().FindAll(animal => !animal.isMatched);
 
             if (_animals.Count > 0)
@@ -87,12 +116,5 @@ namespace Source
                 animal.ResetState();
             }
         }
-
-        IEnumerator Test()
-        {
-            yield return new WaitForSecondsRealtime(10f);
-            Evaluate();
-        }
-        
     }
 }

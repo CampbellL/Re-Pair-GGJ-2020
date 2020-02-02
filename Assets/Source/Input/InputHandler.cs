@@ -30,7 +30,7 @@ public class InputHandler : MonoBehaviour
             .Where(_ =>
             {
                 Vector2 mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-                _startHit = Physics2D.OverlapCircle(mousePos, 1, LayerMask.GetMask("Animal"));
+                _startHit = Physics2D.OverlapCircle(mousePos, 0.2f, LayerMask.GetMask("Animal"));
                 return _startHit != null;
             })
             .Where(_ => _startHit.GetComponent<Animal>().connectedObject == null);
@@ -50,7 +50,7 @@ public class InputHandler : MonoBehaviour
             {
                 this._dragging = false;
                 Vector3 pos = _mainCamera.ScreenToWorldPoint(Input.GetTouch(0).position);
-                _endHit = Physics2D.OverlapCircle(new Vector2(pos.x, pos.y), 1, LayerMask.GetMask("Animal"));
+                _endHit = Physics2D.OverlapCircle(new Vector2(pos.x, pos.y), 0.2f, LayerMask.GetMask("Animal"));
                 if (_endHit == null || _endHit.gameObject == _startHit.gameObject ||
                     _endHit.GetComponent<Animal>().connectedObject != null)
                 {
