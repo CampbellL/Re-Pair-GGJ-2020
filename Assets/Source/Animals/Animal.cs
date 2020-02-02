@@ -4,4 +4,5 @@ public class Animal : MonoBehaviour
 {
     public bool isStatic;
     public GameObject connectedObject;
+    public string animalType;
 }
