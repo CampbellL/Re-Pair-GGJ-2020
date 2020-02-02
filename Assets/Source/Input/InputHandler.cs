@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Source;
 using Source.Animals;
 using UniRx;
 using UnityEditor;
@@ -65,6 +66,7 @@ public class InputHandler : MonoBehaviour
                 hitAnimal.connectedObject = _startHit.gameObject;
                 hitAnimal.GetComponent<Animal>().isStatic = true;
                 _startHit.gameObject.GetComponent<Animal>().connectedObject = _endHit.gameObject;
+                GameMode.instance.Play();
             })
             .AddTo(this);
     }
