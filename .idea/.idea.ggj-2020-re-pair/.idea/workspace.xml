@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f5cf753-787f-4fcc-b500-6a5156b46215" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ggj-2020-re-pair/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/DownSlopeWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/DownSlopeWall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/HorizontalWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/HorizontalWall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/UpSlopeWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/UpSlopeWall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/VerticalWall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AnimalPrefabs/Walls/VerticalWall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/level1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/level1.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MapGridScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MapGridScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/GridSystem/GridSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/GridSystem/GridSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Tutorial4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Tutorial4.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +99,7 @@
       <workItem from="1580642748998" duration="6420000" />
       <workItem from="1580654312233" duration="15000" />
       <workItem from="1580654741632" duration="651000" />
+      <workItem from="1580657500027" duration="354000" />
     </task>
     <servers />
   </component>
