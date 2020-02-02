@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 234838564}
   - component: {fileID: 234838563}
   - component: {fileID: 234838562}
+  - component: {fileID: 234838566}
   m_Layer: 8
   m_Name: Triangle (1)
   m_TagString: Finish
@@ -153,8 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
+  isMatched: 0
+  isImmovable: 0
   connectedObject: {fileID: 0}
-  moveSpeed: 0
+  animalType: Animal
 --- !u!61 &234838563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +168,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -245,6 +248,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &234838566
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234838561}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &367406182
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +506,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f804d1d04fe11f4cb29eb0d39d5a931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rules:
+  - origin: Animal
+    targets:
+    - Animal
+    - NormalAnimal
+  - origin: NormalAnimal
+    targets:
+    - FastAnimal
+  - origin: FastAnimal
+    targets: []
+  failCombinations:
+  - type1: Animal
+    type2: FastAnimal
+    combinationSprite: {fileID: 21300000, guid: 56243c288ba66ce428e10424114040fd,
+      type: 3}
+  - type1: Animal
+    type2: NormalAnimal
+    combinationSprite: {fileID: 21300000, guid: a16f5140fd60c714a9560a8a2d03cde3,
+      type: 3}
+  - type1: FastAnimal
+    type2: NormalAnimal
+    combinationSprite: {fileID: 21300000, guid: f97188121707602439cf0ee7a107f5b7,
+      type: 3}
 --- !u!1 &761461425
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +541,7 @@ GameObject:
   - component: {fileID: 761461426}
   - component: {fileID: 761461428}
   - component: {fileID: 761461429}
+  - component: {fileID: 761461430}
   m_Layer: 8
   m_Name: redsquare
   m_TagString: Respawn
@@ -575,7 +623,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -604,8 +652,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
+  isMatched: 0
+  isImmovable: 0
   connectedObject: {fileID: 0}
-  moveSpeed: 0
+  animalType: NormalAnimal
+--- !u!50 &761461430
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761461425}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1514893734
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +689,7 @@ GameObject:
   - component: {fileID: 1514893736}
   - component: {fileID: 1514893735}
   - component: {fileID: 1514893738}
+  - component: {fileID: 1514893739}
   m_Layer: 8
   m_Name: redsquare (1)
   m_TagString: Respawn
@@ -635,7 +707,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -728,8 +800,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
+  isMatched: 0
+  isImmovable: 0
   connectedObject: {fileID: 0}
-  moveSpeed: 0
+  animalType: FastAnimal
+--- !u!50 &1514893739
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514893734}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1623643818
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +837,7 @@ GameObject:
   - component: {fileID: 1623643819}
   - component: {fileID: 1623643821}
   - component: {fileID: 1623643822}
+  - component: {fileID: 1623643823}
   m_Layer: 8
   m_Name: Triangle
   m_TagString: Finish
@@ -823,7 +919,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -852,8 +948,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
+  isMatched: 0
+  isImmovable: 0
   connectedObject: {fileID: 0}
-  moveSpeed: 0
+  animalType: Animal
+--- !u!50 &1623643823
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623643818}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2135109362
 GameObject:
   m_ObjectHideFlags: 0
