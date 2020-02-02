@@ -72,7 +72,17 @@ public class InputHandler : MonoBehaviour
         if (_startHit.transform == null) return;
         if (Camera.main == null) return;
         if (Input.touchCount < 1) return;
+        
+        Vector2 mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Collider2D obstacle = Physics2D.OverlapCircle(mousePos, 1, LayerMask.GetMask("Obstacle"));
 
+        if (obstacle != null)
+        {
+            Destroy(this._renderers.Peek().gameObject);
+            this._renderers.Pop();
+            return;
+        }
+        
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
         this._renderers.Peek().enabled = true;
         this._renderers.Peek().SetPosition(1, new Vector3(pos.x, pos.y, 1));
