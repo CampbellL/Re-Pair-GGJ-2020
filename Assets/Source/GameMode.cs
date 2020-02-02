@@ -1,27 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Source.Animals;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameMode : MonoBehaviour
+namespace Source
 {
-    public int tries;
-    private Animal[] animals;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class GameMode : MonoBehaviour
     {
-        animals = FindObjectsOfType<Animal>().Where();
-    }
+        public static GameMode instance;
+        public int Tries { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        private List<Animal> _animals;
 
-    void Play()
-    {
-        
+        // Start is called before the first frame update
+        void Start()
+        {
+            instance = this;
+            //DontDestroyOnLoad(this);
+
+            Tries = 0;
+            _animals = FindObjectsOfType<Animal>().ToList().Where((animal) => !animal.isStatic) as List<Animal>;
+        }
+
+        public void Play()
+        {
+            foreach (var animal in _animals)
+                animal.StartMoving();
+        }
+
+        public void ResetPuzzle()
+        {
+            Tries++;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

@@ -152,7 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0736de3f261d547f28f0c68cfbb37959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   connectedObject: {fileID: 0}
+  moveSpeed: 0
 --- !u!61 &234838563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -383,6 +385,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -467,6 +470,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804d1d04fe11f4cb29eb0d39d5a931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &761461425
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0736de3f261d547f28f0c68cfbb37959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   connectedObject: {fileID: 0}
+  moveSpeed: 0
 --- !u!1 &1514893734
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0736de3f261d547f28f0c68cfbb37959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   connectedObject: {fileID: 0}
+  moveSpeed: 0
 --- !u!1 &1623643818
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +851,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0736de3f261d547f28f0c68cfbb37959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   connectedObject: {fileID: 0}
+  moveSpeed: 0
 --- !u!1 &2135109362
 GameObject:
   m_ObjectHideFlags: 0
