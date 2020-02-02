@@ -138,7 +138,7 @@ namespace Source.Animals
                                 && (combination.type1 == animalType || combination.type2 == animalType))
                             {
                                 otherScript.sprRndr.sprite = combination.combinationSprite;
-                                other.transform.localScale = new Vector3(2.1f, 2.1f, 2.1f);
+                                //other.transform.localScale = new Vector3(2.1f, 2.1f, 2.1f);
                             }
                             else
                             {
