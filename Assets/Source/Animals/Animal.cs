@@ -89,49 +89,58 @@ namespace Source.Animals
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Animal otherScript = other.gameObject.GetComponent<Animal>();
-            if (!isStatic)
+            if (other.CompareTag("Animal"))
             {
-                bool matchSuccess = false;
-                Debug.Log(_matchableAnimalTypes.Count);
-                foreach (var matchableType in _matchableAnimalTypes)
+                if (!isStatic)
                 {
-                    if (otherScript.animalType == matchableType)
-                    {
-                        //success
-                        matchSuccess = true;
-                        Debug.Log("successfully matched!");
-                        _move = false;
-                        break;
-                    }
-                }
+                    Animal otherScript = other.gameObject.GetComponent<Animal>();
+                    bool matchSuccess = false;
 
-                sprRndr.enabled = false;
-                colliderRef.enabled = false;
-                otherScript.colliderRef.enabled = false;
-
-                if (matchSuccess)
-                {
-                    otherScript.sprRndr.enabled = false;
-                    isMatched = true;
-                    otherScript.isMatched = true;
-                }
-                else
-                {
-                    Debug.Log("fail!");
-                    foreach (var combination in GameMode.instance.failCombinations)
+                    foreach (var matchableType in _matchableAnimalTypes)
                     {
-                        if ((combination.type1 == otherScript.animalType || combination.type2 == otherScript.animalType) 
-                            && (combination.type1 == animalType || combination.type2 == animalType))
+                        if (otherScript.animalType == matchableType)
                         {
-                            otherScript.sprRndr.sprite = combination.combinationSprite;
-                        }
-                        else
-                        {
-                            //fail state
+                            //success
+                            matchSuccess = true;
+                            Debug.Log("successfully matched!");
+                            _move = false;
+                            break;
                         }
                     }
+
+                    sprRndr.enabled = false;
+                    colliderRef.enabled = false;
+                    otherScript.colliderRef.enabled = false;
+
+                    if (matchSuccess)
+                    {
+                        otherScript.sprRndr.enabled = false;
+                        isMatched = true;
+                        otherScript.isMatched = true;
+                    }
+                    else
+                    {
+                        Debug.Log("fail!");
+                        foreach (var combination in GameMode.instance.failCombinations)
+                        {
+                            if ((combination.type1 == otherScript.animalType ||
+                                 combination.type2 == otherScript.animalType)
+                                && (combination.type1 == animalType || combination.type2 == animalType))
+                            {
+                                otherScript.sprRndr.sprite = combination.combinationSprite;
+                            }
+                            else
+                            {
+                                //fail state
+                            }
+                        }
+                    }
                 }
+            } 
+            else if (other.CompareTag("Block"))
+            {
+                _move = false;
+                //fail sprite
             }
         }
     }
